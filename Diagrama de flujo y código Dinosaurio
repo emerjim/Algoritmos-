@@ -1,0 +1,41 @@
+using System.Globalization;
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string nombreDinosaurio;
+        double pesoLibras;
+        double longitudPies;
+        double pesoKilog;
+        double longitudMetros;
+
+        Console.WriteLine("Ingrese nombre de Dinosaurio: ");
+        nombreDinosaurio = Console.ReadLine ();
+
+        Console.WriteLine("Ingrese peso en libras: ");
+        pesoLibras = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Ingrese longitud en Pies: ");
+        longitudPies = Convert.ToDouble(Console.ReadLine());
+
+        if (pesoLibras < 0 || longitudPies < 0)
+        {
+            Console.WriteLine("Ah ingresado un valor incorrecto");
+            return;
+        }
+        else
+        {
+            pesoKilog = (pesoLibras * 0.453592);
+            longitudMetros = (longitudPies * 0.3048);
+        }
+
+        Console.WriteLine("Datos del Dinosaurio................");
+        Console.WriteLine("Nombre: " + nombreDinosaurio);
+        Console.WriteLine("Peso en Libras: " + pesoLibras);
+        Console.WriteLine("Longitud en Pies: " + longitudPies);
+        Console.WriteLine("Conversion..........................");
+        Console.WriteLine("Peso en Kilogramos: " + pesoKilog);
+        Console.WriteLine("Longitud en Metros: " + longitudMetros);
+        Console.WriteLine("Fin.................................");
+    }
+}
